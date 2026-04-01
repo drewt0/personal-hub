@@ -1,4 +1,5 @@
 import QuickLinks from '../components/QuickLinks';
+import Weather from '../components/Weather';
 
 export default function Home() {
   return (
@@ -14,6 +15,10 @@ export default function Home() {
             Quick Access
           </h2>
           <QuickLinks />
+        </section>
+
+        <section className="mb-8">
+           <Weather />
         </section>
         
         {/* Soon we will add the Weather and Scratchpad here! */}

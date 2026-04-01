@@ -7,7 +7,6 @@ const links = [
   { name: 'Dashboard', url: '#', icon: <Layout size={24} /> },
 ];
 
-// CRITICAL: Make sure "export default" is right here!
 export default function QuickLinks() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
