@@ -1,10 +1,10 @@
-import { GraduationCap, Code2, Truck, Layout } from 'lucide-react';
+import { GraduationCap, Code2, UserCircle, Bot } from 'lucide-react';
 
 const links = [
   { name: 'WGU Portal', url: 'https://my.wgu.edu', icon: <GraduationCap size={24} /> },
   { name: 'GitHub', url: 'https://github.com', icon: <Code2 size={24} /> },
-  { name: 'Van Project', url: '#', icon: <Truck size={24} /> },
-  { name: 'Dashboard', url: '#', icon: <Layout size={24} /> },
+  { name: 'LinkedIn', url: 'https://https://linkedin.com/in/andrew-talcott-a20b043bb/', icon: <UserCircle size={24} /> },
+  { name: 'Gemini', url: 'https://gemini.google.com', icon: <Bot size={24} /> },
 ];
 
 export default function QuickLinks() {
