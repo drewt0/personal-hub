@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CheckCircle2, Plus, Trash2 } from 'lucide-react';
 
 export default function TaskList() {
@@ -8,6 +8,21 @@ export default function TaskList() {
     { id: 2, text: 'Mount Solar Panels', completed: false }
   ]);
   const [input, setInput] = useState('');
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const savedTasks = localStorage.getItem('van-tasks');
+    if (savedTasks) {
+      setTasks(JSON.parse(savedTasks));
+    }
+    setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (isLoaded) {
+      localStorage.setItem('van-tasks', JSON.stringify(tasks));
+    }
+  }, [tasks, isLoaded]);
 
   const addTask = () => {
     if (!input.trim()) return;
