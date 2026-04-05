@@ -2,6 +2,7 @@
 
 import { useState, useEffect, } from 'react';
 import { CloudSun, Thermometer } from 'lucide-react';
+import WeatherIcon from './WeatherIcon';
 
 export default function Weather() {
     const [data, setData] = useState<any>(null);
@@ -35,6 +36,7 @@ export default function Weather() {
       <div className="text-yellow-500">
         <CloudSun size={48} strokeWidth={1.5} />
       </div>
+      <WeatherIcon condition={data.weather[0].main} />
     </div>
   );
 }
